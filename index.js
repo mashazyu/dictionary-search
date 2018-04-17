@@ -30,6 +30,11 @@ const main = async () => {
     const SystranKey = process.env.SYSTRAN_KEY
     const YandexKey = process.env.YANDEX_KEY
 
+    if (YandexKey===undefined || SystranKey=== undefined || ABBYKey) {
+        console.log('Please add ABBYKey, SystranKey, YandexKey variables to your environment.')
+        return
+    }
+
     let response
 
     console.log('We are looking for translation of word ')
